@@ -1,0 +1,6 @@
+ninja: Entering directory `E:\Github\ncnn-android-yolov8-pose\app\.cxx\cmake\debug\x86_64'
+[1/5] Building CXX object CMakeFiles/yolov8ncnn.dir/ndkcamera.cpp.o
+[2/5] Building CXX object CMakeFiles/yolov8ncnn.dir/yolov8ncnn.cpp.o
+[3/5] Building CXX object CMakeFiles/yolov8ncnn.dir/yolo.cpp.o
+[4/5] Building CXX object CMakeFiles/yolov8ncnn.dir/yolo-pose.cpp.o
+[5/5] Linking CXX shared library E:\Github\ncnn-android-yolov8-pose\app\build\intermediates\cmake\debug\obj\x86_64\libyolov8ncnn.so
