@@ -38,5 +38,5 @@ https://github.com/nihui/opencv-mobile
 ## Reference：  
 https://github.com/nihui/ncnn-android-nanodet  
 https://github.com/Tencent/ncnn  
-https://github.com/ultralytics/assets/releases/tag/v0.0.0
+https://github.com/ultralytics/assets/releases/tag/v0.0.0   
 https://github.com/FeiGeChuanShu/ncnn-android-yolov8
