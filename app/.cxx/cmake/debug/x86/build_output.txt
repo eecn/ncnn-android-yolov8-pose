@@ -1,4 +1,1 @@
-Found OpenMP_C: -fopenmp=libomp  
-Found OpenMP_CXX: -fopenmp=libomp  
-Found OpenMP: TRUE   
 Configuring done

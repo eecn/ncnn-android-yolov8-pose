@@ -201,8 +201,8 @@ CMAKE_SYSTEM_NAME:UNINITIALIZED=Android
 //No help, variable specified on the command line.
 CMAKE_SYSTEM_VERSION:UNINITIALIZED=24
 
-//The CMake toolchain file
-CMAKE_TOOLCHAIN_FILE:FILEPATH=C:/Users/wangke/AppData/Local/Android/Sdk/ndk/android-ndk-r21e-windows-x86_64/android-ndk-r21e/build/cmake/android.toolchain.cmake
+//No help, variable specified on the command line.
+CMAKE_TOOLCHAIN_FILE:UNINITIALIZED=C:\Users\wangke\AppData\Local\Android\Sdk\ndk\android-ndk-r21e-windows-x86_64\android-ndk-r21e\build\cmake\android.toolchain.cmake
 
 //If this value is on, makefiles will be generated without the
 // .SILENT directive, and all commands will be echoed to the console
@@ -230,6 +230,9 @@ Vulkan_INCLUDE_DIR:PATH=C:/Users/wangke/AppData/Local/Android/Sdk/ndk/android-nd
 
 //Path to a library.
 Vulkan_LIBRARY:FILEPATH=C:/Users/wangke/AppData/Local/Android/Sdk/ndk/android-ndk-r21e-windows-x86_64/android-ndk-r21e/toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/24/libvulkan.so
+
+//The directory containing a CMake configuration file for ncnn.
+ncnn_DIR:PATH=ncnn_DIR-NOTFOUND
 
 //Value Computed by CMake
 yolov8ncnn_BINARY_DIR:STATIC=E:/Github/ncnn-android-yolov8-pose/app/.cxx/cmake/debug/arm64-v8a
@@ -379,11 +382,11 @@ CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding OpenCV
 FIND_PACKAGE_MESSAGE_DETAILS_OpenCV:INTERNAL=[E:/Github/ncnn-android-yolov8-pose/app/src/main/jni/opencv-mobile-4.5.1-android][cfound components:  core imgproc ][v4.5.1()]
 //Details about finding OpenMP
-FIND_PACKAGE_MESSAGE_DETAILS_OpenMP:INTERNAL=[TRUE][TRUE][c ][v3.1()]
+FIND_PACKAGE_MESSAGE_DETAILS_OpenMP:INTERNAL=[TRUE][TRUE][c ][v()]
 //Details about finding OpenMP_C
-FIND_PACKAGE_MESSAGE_DETAILS_OpenMP_C:INTERNAL=[-fopenmp=libomp][C:/Users/wangke/AppData/Local/Android/Sdk/ndk/android-ndk-r21e-windows-x86_64/android-ndk-r21e/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/9.0.9/lib/linux/aarch64/libomp.so][v3.1()]
+FIND_PACKAGE_MESSAGE_DETAILS_OpenMP_C:INTERNAL=[-fopenmp=libomp][C:/Users/wangke/AppData/Local/Android/Sdk/ndk/android-ndk-r21e-windows-x86_64/android-ndk-r21e/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/9.0.9/lib/linux/aarch64/libomp.so][v()]
 //Details about finding OpenMP_CXX
-FIND_PACKAGE_MESSAGE_DETAILS_OpenMP_CXX:INTERNAL=[-fopenmp=libomp][C:/Users/wangke/AppData/Local/Android/Sdk/ndk/android-ndk-r21e-windows-x86_64/android-ndk-r21e/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/9.0.9/lib/linux/aarch64/libomp.so][v3.1()]
+FIND_PACKAGE_MESSAGE_DETAILS_OpenMP_CXX:INTERNAL=[-fopenmp=libomp][C:/Users/wangke/AppData/Local/Android/Sdk/ndk/android-ndk-r21e-windows-x86_64/android-ndk-r21e/toolchains/llvm/prebuilt/windows-x86_64/lib64/clang/9.0.9/lib/linux/aarch64/libomp.so][v()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //Details about finding Vulkan

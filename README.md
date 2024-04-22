@@ -8,7 +8,23 @@ https://github.com/Tencent/ncnn
 
 https://github.com/nihui/opencv-mobile
 
+# export NCNN model
+install ultralytics library   
+use yolo CLI
+```bash
+yolo export model=yolov8s-pose.pt format=ncnn  # export official model
+```
+or in a Python environment   
+```python 
+from ultralytics import YOLO
 
+# Load a model
+model = YOLO('yolov8s-pose.pt')  # load an official model
+
+# Export the model
+model.export(format='ncnn')
+```
+Then rename the ncnn model and put it into "assets" directory.   
 ## how to build and run
 ### step1
 https://github.com/Tencent/ncnn/releases

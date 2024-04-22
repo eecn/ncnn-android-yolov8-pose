@@ -1,28 +1,24 @@
 {
   "stringTable": {
     "0": "E:/Github/ncnn-android-yolov8-pose/app/.cxx/cmake/debug/arm64-v8a",
-    "1": "--target=aarch64-none-linux-android24 --gcc-toolchain=C:/Users/wangke/AppData/Local/Android/Sdk/ndk/android-ndk-r21e-windows-x86_64/android-ndk-r21e/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/wangke/AppData/Local/Android/Sdk/ndk/android-ndk-r21e-windows-x86_64/android-ndk-r21e/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dyolov8ncnn_EXPORTS -isystem E:/Github/ncnn-android-yolov8-pose/app/src/main/jni/ncnn-20220420-android-vulkan/arm64-v8a/include/ncnn -isystem E:/Github/ncnn-android-yolov8-pose/app/src/main/jni/opencv-mobile-4.5.1-android/sdk/native/jni/include -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -O0 -fno-limit-debug-info -fPIC -fno-rtti -fno-exceptions -std=gnu++11"
+    "1": "--target=aarch64-none-linux-android24 --gcc-toolchain=C:/Users/wangke/AppData/Local/Android/Sdk/ndk/android-ndk-r21e-windows-x86_64/android-ndk-r21e/toolchains/llvm/prebuilt/windows-x86_64 --sysroot=C:/Users/wangke/AppData/Local/Android/Sdk/ndk/android-ndk-r21e-windows-x86_64/android-ndk-r21e/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dyolov8ncnn_EXPORTS -isystem E:/Github/ncnn-android-yolov8-pose/app/src/main/jni/ncnn-20240410-android-vulkan/arm64-v8a/include/ncnn -isystem E:/Github/ncnn-android-yolov8-pose/app/src/main/jni/opencv-mobile-4.5.1-android/sdk/native/jni/include -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -O0 -fno-limit-debug-info -fPIC -fno-rtti -fno-exceptions -std=gnu++11"
   },
   "buildFiles": [
     "E:\\Github\\ncnn-android-yolov8-pose\\app\\src\\main\\jni\\opencv-mobile-4.5.1-android\\sdk\\native\\jni\\abi-arm64-v8a\\OpenCVModules-release.cmake",
-    "E:\\Github\\ncnn-android-yolov8-pose\\app\\src\\main\\jni\\ncnn-20220420-android-vulkan\\arm64-v8a\\lib\\cmake\\ncnn\\ncnn.cmake",
-    "E:\\Github\\ncnn-android-yolov8-pose\\app\\src\\main\\jni\\ncnn-20220420-android-vulkan\\arm64-v8a\\lib\\cmake\\OGLCompilerTargets-release.cmake",
+    "E:\\Github\\ncnn-android-yolov8-pose\\app\\src\\main\\jni\\ncnn-20240410-android-vulkan\\arm64-v8a\\lib\\cmake\\glslang\\glslang-config-version.cmake",
+    "E:\\Github\\ncnn-android-yolov8-pose\\app\\src\\main\\jni\\ncnn-20240410-android-vulkan\\arm64-v8a\\lib\\cmake\\glslang\\glslang-config.cmake",
+    "E:\\Github\\ncnn-android-yolov8-pose\\app\\src\\main\\jni\\ncnn-20240410-android-vulkan\\arm64-v8a\\lib\\cmake\\ncnn\\ncnnConfig.cmake",
     "E:\\Github\\ncnn-android-yolov8-pose\\app\\src\\main\\jni\\opencv-mobile-4.5.1-android\\sdk\\native\\jni\\OpenCVConfig.cmake",
-    "E:\\Github\\ncnn-android-yolov8-pose\\app\\src\\main\\jni\\ncnn-20220420-android-vulkan\\arm64-v8a\\lib\\cmake\\OSDependentTargets.cmake",
+    "E:\\Github\\ncnn-android-yolov8-pose\\app\\src\\main\\jni\\ncnn-20240410-android-vulkan\\arm64-v8a\\lib\\cmake\\ncnn\\ncnn-release.cmake",
     "E:\\Github\\ncnn-android-yolov8-pose\\app\\src\\main\\jni\\opencv-mobile-4.5.1-android\\sdk\\native\\jni\\OpenCVConfig-version.cmake",
+    "E:\\Github\\ncnn-android-yolov8-pose\\app\\src\\main\\jni\\ncnn-20240410-android-vulkan\\arm64-v8a\\lib\\cmake\\glslang\\glslang-targets.cmake",
     "E:\\Github\\ncnn-android-yolov8-pose\\app\\src\\main\\jni\\CMakeLists.txt",
-    "E:\\Github\\ncnn-android-yolov8-pose\\app\\src\\main\\jni\\ncnn-20220420-android-vulkan\\arm64-v8a\\lib\\cmake\\ncnn\\ncnn-release.cmake",
-    "E:\\Github\\ncnn-android-yolov8-pose\\app\\src\\main\\jni\\ncnn-20220420-android-vulkan\\arm64-v8a\\lib\\cmake\\OSDependentTargets-release.cmake",
-    "E:\\Github\\ncnn-android-yolov8-pose\\app\\src\\main\\jni\\ncnn-20220420-android-vulkan\\arm64-v8a\\lib\\cmake\\glslangTargets.cmake",
-    "E:\\Github\\ncnn-android-yolov8-pose\\app\\src\\main\\jni\\ncnn-20220420-android-vulkan\\arm64-v8a\\lib\\cmake\\OGLCompilerTargets.cmake",
-    "E:\\Github\\ncnn-android-yolov8-pose\\app\\src\\main\\jni\\ncnn-20220420-android-vulkan\\arm64-v8a\\lib\\cmake\\SPIRVTargets-release.cmake",
     "C:\\Users\\wangke\\AppData\\Local\\Android\\Sdk\\ndk\\android-ndk-r21e-windows-x86_64\\android-ndk-r21e\\build\\cmake\\platforms.cmake",
-    "E:\\Github\\ncnn-android-yolov8-pose\\app\\src\\main\\jni\\ncnn-20220420-android-vulkan\\arm64-v8a\\lib\\cmake\\ncnn\\ncnnConfig.cmake",
     "E:\\Github\\ncnn-android-yolov8-pose\\app\\src\\main\\jni\\opencv-mobile-4.5.1-android\\sdk\\native\\jni\\abi-arm64-v8a\\OpenCVConfig.cmake",
     "E:\\Github\\ncnn-android-yolov8-pose\\app\\src\\main\\jni\\opencv-mobile-4.5.1-android\\sdk\\native\\jni\\abi-arm64-v8a\\OpenCVModules.cmake",
-    "E:\\Github\\ncnn-android-yolov8-pose\\app\\src\\main\\jni\\ncnn-20220420-android-vulkan\\arm64-v8a\\lib\\cmake\\SPIRVTargets.cmake",
-    "C:\\Users\\wangke\\AppData\\Local\\Android\\Sdk\\ndk\\android-ndk-r21e-windows-x86_64\\android-ndk-r21e\\build\\cmake\\android.toolchain.cmake",
-    "E:\\Github\\ncnn-android-yolov8-pose\\app\\src\\main\\jni\\ncnn-20220420-android-vulkan\\arm64-v8a\\lib\\cmake\\glslangTargets-release.cmake"
+    "E:\\Github\\ncnn-android-yolov8-pose\\app\\src\\main\\jni\\ncnn-20240410-android-vulkan\\arm64-v8a\\lib\\cmake\\ncnn\\ncnn.cmake",
+    "E:\\Github\\ncnn-android-yolov8-pose\\app\\src\\main\\jni\\ncnn-20240410-android-vulkan\\arm64-v8a\\lib\\cmake\\glslang\\glslang-targets-release.cmake",
+    "C:\\Users\\wangke\\AppData\\Local\\Android\\Sdk\\ndk\\android-ndk-r21e-windows-x86_64\\android-ndk-r21e\\build\\cmake\\android.toolchain.cmake"
   ],
   "cleanCommands": [
     "C:\\Users\\wangke\\AppData\\Local\\Android\\Sdk\\cmake\\3.10.2.4988404\\bin\\ninja.exe -C \"E:\\Github\\ncnn-android-yolov8-pose\\app\\.cxx\\cmake\\debug\\arm64-v8a\" clean"
@@ -52,7 +48,7 @@
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "E:\\Github\\ncnn-android-yolov8-pose\\app\\src\\main\\jni\\yolo-pose.cpp",
+          "src": "E:\\Github\\ncnn-android-yolov8-pose\\app\\src\\main\\jni\\yolov8pose.cpp",
           "flagsOrdinal": 1,
           "workingDirectoryOrdinal": 0
         }

@@ -27,7 +27,7 @@
 #include <benchmark.h>
 
 #include "yolo.h"
-#include "yolo-pose.h"
+#include "yolov8pose.h"
 
 #include "ndkcamera.h"
 
@@ -112,7 +112,7 @@ static int draw_fps(cv::Mat& rgb)
 }
 
 //static Yolo* g_yolo = 0;
-static Yolo_pose* g_yolo = 0;
+static Inference* g_yolo = 0;
 static ncnn::Mutex lock;
 
 class MyNdkCamera : public NdkCameraWindow
@@ -129,8 +129,8 @@ void MyNdkCamera::on_image_render(cv::Mat& rgb) const
 
         if (g_yolo)
         {
-            std::vector<Object_pose> objects;
-            g_yolo->detect(rgb, objects);
+            std::vector<Pose> objects;
+            objects = g_yolo->runInference(rgb);
 
             g_yolo->draw(rgb, objects);
         }
@@ -185,26 +185,20 @@ JNIEXPORT jboolean JNICALL Java_com_tencent_yolov8ncnn_Yolov8Ncnn_loadModel(JNIE
 
     const char* modeltypes[] =
     {
-        //"n",
-        //"s",
-        "n-pose",
-        "s-pose",
+        "n",
+        "s",
     };
 
     const int target_sizes[] =
     {
-        //320,
-        //320,
-            640,
-            640,
+        640,
+        640,
     };
 
     const float mean_vals[][3] =
     {
-        //{103.53f, 116.28f, 123.675f},
-        //{103.53f, 116.28f, 123.675f},
-            {0.0f, 0.0f, 0.0f},
-            {0.0f, 0.0f, 0.0f},
+        {0.0f, 0.0f, 0.0f},
+        {0.0f, 0.0f, 0.0f},
     };
 
     const float norm_vals[][3] =
@@ -231,8 +225,9 @@ JNIEXPORT jboolean JNICALL Java_com_tencent_yolov8ncnn_Yolov8Ncnn_loadModel(JNIE
         {
             if (!g_yolo)
                 //g_yolo = new Yolo;
-                g_yolo = new Yolo_pose;
-            g_yolo->load(mgr, modeltype, target_size, mean_vals[(int)modelid], norm_vals[(int)modelid], use_gpu);
+                g_yolo = new Inference;
+                //g_yolo->load(mgr, modeltype, target_size, mean_vals[(int)modelid], norm_vals[(int)modelid], use_gpu);
+                g_yolo->loadNcnnNetwork(mgr, modeltype, target_size, mean_vals[(int)modelid], norm_vals[(int)modelid], use_gpu);
         }
     }
 

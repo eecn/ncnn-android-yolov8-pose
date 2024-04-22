@@ -31,6 +31,10 @@
     },
     {
       "level": "INFO",
+      "message": "Considering C:\\Users\\wangke\\AppData\\Local\\Android\\Sdk\\ndk\\23.1.7779620 in SDK ndk folder"
+    },
+    {
+      "level": "INFO",
       "message": "Considering C:\\Users\\wangke\\AppData\\Local\\Android\\Sdk\\ndk\\25.1.8937393 in SDK ndk folder"
     },
     {

@@ -1,2 +1,11 @@
 ninja: Entering directory `E:\Github\ncnn-android-yolov8-pose\app\.cxx\cmake\debug\armeabi-v7a'
-ninja: no work to do.
+[1/5] Building CXX object CMakeFiles/yolov8ncnn.dir/ndkcamera.cpp.o
+E:/Github/ncnn-android-yolov8-pose/app/src/main/jni/ndkcamera.cpp:152:117: warning: format specifies type 'long' but the argument has type 'int64_t' (aka 'long long') [-Wformat]
+    __android_log_print(ANDROID_LOG_WARN, "NdkCamera", "onCaptureSequenceCompleted %p %d %ld", session, sequenceId, frameNumber);
+                                                                                         ~~~                        ^~~~~~~~~~~
+                                                                                         %lld
+1 warning generated.
+[2/5] Building CXX object CMakeFiles/yolov8ncnn.dir/yolov8ncnn.cpp.o
+[3/5] Building CXX object CMakeFiles/yolov8ncnn.dir/yolo.cpp.o
+[4/5] Building CXX object CMakeFiles/yolov8ncnn.dir/yolov8pose.cpp.o
+[5/5] Linking CXX shared library E:\Github\ncnn-android-yolov8-pose\app\build\intermediates\cmake\debug\obj\armeabi-v7a\libyolov8ncnn.so
