@@ -124,8 +124,8 @@ int Inference::loadNcnnNetwork(AAssetManager* mgr, const char* modeltype , const
 
     char parampath[256];
     char modelpath[256];
-    sprintf(parampath, "yolov8%s-pose.param", modeltype);
-    sprintf(modelpath, "yolov8%s-pose.bin", modeltype);
+    sprintf(parampath, "yolov8%s-pose_ncnn_model/model.ncnn.param", modeltype);
+    sprintf(modelpath, "yolov8%s-pose_ncnn_model/model.ncnn.bin", modeltype);
 
     net.load_param(mgr, parampath);
     net.load_model(mgr, modelpath);
@@ -251,6 +251,18 @@ int Inference::draw(cv::Mat& rgb, const std::vector<Pose>& objects) {
     cv::Mat res = rgb;
     for (auto& obj : objects) {
         cv::rectangle(res, obj.box, { 0, 0, 255 }, 2);
+
+        char text[256];
+        sprintf(text, "person %.1f%%", obj.confidence * 100);
+        int baseLine = 0;
+        cv::Size label_size = cv::getTextSize(text, cv::FONT_HERSHEY_SIMPLEX, 0.5, 1, &baseLine);
+        int x1 = obj.box.x;
+        int y1 = obj.box.y - label_size.height - baseLine;
+        if (y1 < 0)
+            y1 = 0;
+        if (x1 + label_size.width > rgb.cols)
+            x1 = rgb.cols - label_size.width;
+        cv::putText(rgb, text, cv::Point(x1, y1 + label_size.height), cv::FONT_HERSHEY_SIMPLEX, 0.5, cv::Scalar(255, 255, 255), 1);
 
         int x = (int)obj.box.x;
         int y = (int)obj.box.y + 1;
