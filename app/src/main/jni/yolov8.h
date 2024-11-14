@@ -1,56 +1,61 @@
-// Tencent is pleased to support the open source community by making ncnn available.
 //
-// Copyright (C) 2021 THL A29 Limited, a Tencent company. All rights reserved.
+// Created by wangke on 2024/11/13.
 //
-// Licensed under the BSD 3-Clause License (the "License"); you may not use this file except
-// in compliance with the License. You may obtain a copy of the License at
-//
-// https://opensource.org/licenses/BSD-3-Clause
-//
-// Unless required by applicable law or agreed to in writing, software distributed
-// under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
-// CONDITIONS OF ANY KIND, either express or implied. See the License for the
-// specific language governing permissions and limitations under the License.
 
-#ifndef YOLO_H
-#define YOLO_H
+#ifndef NCNN_ANDROID_YOLOV8_H
+#define NCNN_ANDROID_YOLOV8_H
 
-#include <opencv2/core/core.hpp>
+#include <vector>
+#include <string>
+
+#include <opencv2/imgproc.hpp>
+#include <opencv2/opencv.hpp>
 
 #include <net.h>
 
-struct Object
+struct Detection
 {
-    cv::Rect_<float> rect;
-    int label;
-    float prob;
+    int class_id{0};
+    float confidence{0.0};
+    cv::Rect box{};
 };
-struct GridAndStride
-{
-    int grid0;
-    int grid1;
-    int stride;
-};
-class Yolo
+
+class Inference_det
 {
 public:
-    Yolo();
-
-    int load(const char* modeltype, int target_size, const float* mean_vals, const float* norm_vals, bool use_gpu = false);
-
-    int load(AAssetManager* mgr, const char* modeltype, int target_size, const float* mean_vals, const float* norm_vals, bool use_gpu = false);
-
-    int detect(const cv::Mat& rgb, std::vector<Object>& objects, float prob_threshold = 0.4f, float nms_threshold = 0.5f);
-
-    int draw(cv::Mat& rgb, const std::vector<Object>& objects);
+    Inference_det();
+    int loadNcnnNetwork(AAssetManager* mgr, const char* modeltype , const int& modelInputShape, const float* meanVals, const float* normVals, bool useGpu = false);
+    std::vector<Detection> runInference(const cv::Mat &input);
+    int draw(cv::Mat& rgb, const std::vector<Detection>& objects);
 
 private:
-    ncnn::Net yolo;
-    int target_size;
-    float mean_vals[3];
-    float norm_vals[3];
+
+    std::string modelPath{};
+    bool gpuEnabled{};
+
+    std::vector<std::string> class_names{"person", "bicycle", "car", "motorcycle", "airplane", "bus", "train", "truck",
+                                         "boat", "traffic light", "fire hydrant", "stop sign", "parking meter", "bench", "bird", "cat", "dog", "horse",
+                                         "sheep", "cow", "elephant", "bear", "zebra", "giraffe", "backpack", "umbrella", "handbag", "tie", "suitcase",
+                                         "frisbee", "skis", "snowboard", "sports ball", "kite", "baseball bat", "baseball glove", "skateboard", "surfboard",
+                                         "tennis racket", "bottle", "wine glass", "cup", "fork", "knife", "spoon", "bowl", "banana", "apple", "sandwich",
+                                         "orange", "broccoli", "carrot", "hot dog", "pizza", "donut", "cake", "chair", "couch", "potted plant", "bed", "dining table",
+                                         "toilet", "tv", "laptop", "mouse", "remote", "keyboard", "cell phone", "microwave", "oven", "toaster", "sink", "refrigerator",
+                                         "book", "clock", "vase", "scissors", "teddy bear", "hair drier", "toothbrush"};
+
+
+
+    int modelShape;
+
+    float modelScoreThreshold      {0.45};
+    float modelNMSThreshold        {0.5};
+
+    ncnn::Net net;
+
+    float meanVals[3];
+    float normVals[3];
+
     ncnn::UnlockedPoolAllocator blob_pool_allocator;
     ncnn::PoolAllocator workspace_pool_allocator;
 };
 
-#endif // NANODET_H
+#endif //NCNN_ANDROID_YOLOV8_H
