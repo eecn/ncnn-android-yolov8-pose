@@ -7,7 +7,7 @@
     <uses-feature android:name="android.hardware.camera2.full" />
 
     <application android:label="@string/app_name"
-        android:icon="@drawable/pose">
+        android:icon="@mipmap/pose">
         <activity android:name="MainActivity"
                   android:label="@string/app_name"
                   android:screenOrientation="portrait">
