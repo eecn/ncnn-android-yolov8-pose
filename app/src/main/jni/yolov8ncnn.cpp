@@ -111,8 +111,8 @@ static int draw_fps(cv::Mat& rgb)
     return 0;
 }
 
-static Inference_det* g_yolo = 0;
-//static Inference* g_yolo = 0;
+//static Inference_det* g_yolo = 0;
+static Inference* g_yolo = 0;
 static ncnn::Mutex lock;
 
 class MyNdkCamera : public NdkCameraWindow
@@ -127,20 +127,20 @@ void MyNdkCamera::on_image_render(cv::Mat& rgb) const
     {
         ncnn::MutexLockGuard g(lock);
 
-        /*if (g_yolo)
+        if (g_yolo)
         {
             std::vector<Pose> objects;
             objects = g_yolo->runInference(rgb);
 
             g_yolo->draw(rgb, objects);
-        }*/
-        if (g_yolo)
+        }
+        /*if (g_yolo)
         {
             std::vector<Detection> objects;
             objects = g_yolo->runInference(rgb);
 
             g_yolo->draw(rgb, objects);
-        }
+        }*/
         else
         {
             draw_unsupported(rgb);
@@ -231,8 +231,8 @@ JNIEXPORT jboolean JNICALL Java_com_tencent_yolov8ncnn_Yolov8Ncnn_loadModel(JNIE
         else
         {
             if (!g_yolo)
-                g_yolo = new Inference_det;
-                //g_yolo = new Inference;
+                //g_yolo = new Inference_det;
+                g_yolo = new Inference;
                 g_yolo->loadNcnnNetwork(mgr, modeltype, target_size, mean_vals[(int)modelid], norm_vals[(int)modelid], use_gpu);
         }
     }
